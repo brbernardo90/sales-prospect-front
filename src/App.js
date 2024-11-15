@@ -49,11 +49,12 @@ function App() {
             {extractedInfo && (
                 <div className="results">
                     <h2>Extracted Information</h2>
-                    <p><strong>Industry:</strong> {extractedInfo.Industry}</p>
-                    <p><strong>Products/Services:</strong> {extractedInfo.ProductsServices}</p>
-                    <p><strong>Target Audience:</strong> {extractedInfo.TargetAudience}</p>
-                    <p><strong>Market Position:</strong> {extractedInfo.MarketPosition}</p>
-                    <p><strong>Recent News/Events:</strong> {extractedInfo.RecentNews}</p>
+                    <p>{extractedInfo}</p>
+                    {/* <p><strong>Industry:</strong> {extractedInfo.Industry}</p> */}
+                    {/* <p><strong>Products/Services:</strong> {extractedInfo.ProductsServices}</p> */}
+                    {/* <p><strong>Target Audience:</strong> {extractedInfo.TargetAudience}</p> */}
+                    {/* <p><strong>Market Position:</strong> {extractedInfo.MarketPosition}</p> */}
+                    {/* <p><strong>Recent News/Events:</strong> {extractedInfo.RecentNews}</p> */}
                 </div>
             )}
         </div>
