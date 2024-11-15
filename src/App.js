@@ -17,6 +17,9 @@ function App() {
 
         try {
             const response = await axios.post("https://sales-prospect.onrender.com/sales_prospect", { url });
+            console.log(response)
+            console.log(response.data)
+            console.log(response.data.extracted_info)
             setExtractedInfo(response.data.extracted_info);
         } catch (error) {
             setError("Error extracting information. Please try again.");
