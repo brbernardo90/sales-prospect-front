@@ -16,7 +16,7 @@ function App() {
         setExtractedInfo(null);
 
         try {
-            const response = await axios.post("http://localhost:8000/sales_prospect", { url });
+            const response = await axios.post("https://sales-prospect.onrender.com/sales_prospect", { url });
             setExtractedInfo(response.data.extracted_info);
         } catch (error) {
             setError("Error extracting information. Please try again.");
