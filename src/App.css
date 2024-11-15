@@ -1,0 +1,38 @@
+/* src/App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  margin-left: 10px;
+  padding: 8px;
+  width: 80%;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.results {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.results h2 {
+  margin-bottom: 10px;
+}
