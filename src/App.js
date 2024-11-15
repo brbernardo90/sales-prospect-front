@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from "react";
 import axios from "axios";
+import parse from 'html-react-parser'
 import "./App.css";
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
 
         try {
             const response = await axios.post("https://sales-prospect.onrender.com/sales_prospect", { url });
-            console.log(response)
-            console.log(response.data)
-            console.log(response.data.extracted_info)
+            console.log(response);
+            console.log(response.data);
+            console.log(response.data.extracted_info);
             setExtractedInfo(response.data.extracted_info);
         } catch (error) {
             setError("Error extracting information. Please try again.");
@@ -52,12 +53,8 @@ function App() {
             {extractedInfo && (
                 <div className="results">
                     <h2>Extracted Information</h2>
-                    <p>{extractedInfo}</p>
-                    {/* <p><strong>Industry:</strong> {extractedInfo.Industry}</p> */}
-                    {/* <p><strong>Products/Services:</strong> {extractedInfo.ProductsServices}</p> */}
-                    {/* <p><strong>Target Audience:</strong> {extractedInfo.TargetAudience}</p> */}
-                    {/* <p><strong>Market Position:</strong> {extractedInfo.MarketPosition}</p> */}
-                    {/* <p><strong>Recent News/Events:</strong> {extractedInfo.RecentNews}</p> */}
+                    <p>{parse(extractedInfo.replace('html',''))}</p>
+                    {/* TODO: RETORNAR APENAS O CÓDIGO HTML OU UM JSON */}
                 </div>
             )}
         </div>
